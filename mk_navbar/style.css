@@ -1,0 +1,90 @@
+:root{
+    --text-color:white;
+    --background-color:#ca9b52;
+    --accent-color:#ffe97d;
+}
+body{
+    margin: 0;
+    font-family: source sans pro;
+}
+a{
+    text-decoration: none;
+    color:var(--text-color);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 8px 12px;
+    
+}
+.navlogo {
+    font-size: 24px;
+    color: var(--text-color);
+    padding: 12px;
+}
+.navlogo i{
+    padding:12px;
+    color: var(--accent-color);
+}
+.navmenu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+.navmenu li{
+    padding: 8px 12px;
+}
+.navicons{
+    list-style: none;
+    color:var(--text-color);
+    display: flex;
+    padding-left: 0;
+}
+.navicons li{
+    padding: 8px 12px;
+}
+.toggleBnt{
+    display: none;
+    position: absolute;
+    right: 32px;
+    padding-top: 12px;
+    font-size: 30px;
+    color: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 12px;
+    }
+    .navmenu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .navmenu li{
+        width: 100%;
+        text-align: center;
+    }
+    .navmenu li:hover{
+        background-color: var(--background-color);
+    }
+    .navicons{
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .toggleBnt{
+        display: block;
+    }
+    
+    .navicons.active,
+    .navmenu.active{
+        display:flex;
+    }
+    
+}
