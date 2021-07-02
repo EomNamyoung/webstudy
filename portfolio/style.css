@@ -13,6 +13,7 @@
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
+  --color-violet: #7d568a;
 
   /* Font size */
   --font-large: 48px;
@@ -99,9 +100,10 @@ p {
   color: var(--color-white);
   padding: 16px;
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 #navbar.navbar--dark {
-  background-color: var(--color-pink);
+  background-color: var(--color-violet);
   padding: 8px;
 }
 .navbar__logo {
@@ -405,7 +407,7 @@ p {
 /* Contact */
 
 #contact {
-  background-color: var(--color-pink);
+  background-color: var(--color-violet);
 }
 
 .contact__title,
