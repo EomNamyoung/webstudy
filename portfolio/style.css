@@ -90,21 +90,28 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
   display: flex;
+  width: 100%;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
 }
-
-.navbar__menu {
-  display: flex;
+#navbar.navbar--dark {
+  background-color: var(--color-pink);
+  padding: 8px;
 }
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
+.navbar__menu {
+  display: flex;
+}
+
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
@@ -131,6 +138,7 @@ p {
 #home {
   background: url("img/space.jpg") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 .home__avatar {
@@ -188,7 +196,8 @@ p {
 .major__icon i {
   transition: all var(--animation-duration) ease;
 }
-.major__icon i:hover {
+
+.major__icon:hover i {
   color: var(--color-pink);
   transform: rotate(-30deg) scale(1.1);
 }
@@ -410,12 +419,13 @@ p {
 }
 .contact__links {
   font-size: var(--font-large);
-  margin: 24px;
+  margin: 24px 0;
   transition: all var(--animation-duration) ease-in;
 }
+
 .contact__links i:hover {
   transform: scale(1.1);
-  color: var(--color-blue);
+  color: var(--color-yellow);
 }
 
 /* For below 768px screen width */
