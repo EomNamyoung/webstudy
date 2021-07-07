@@ -42,7 +42,6 @@
 body {
   margin: 0;
   font-family: "Open Sans" sans-serif;
-  cursor: default;
 }
 a {
   text-decoration: none;
@@ -97,7 +96,6 @@ p {
   justify-content: space-between;
   background-color: transparent;
   align-items: center;
-  color: var(--color-white);
   padding: 16px;
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
@@ -109,6 +107,7 @@ p {
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  color: var(--color-white);
 }
 .navbar__menu {
   display: flex;
@@ -117,12 +116,13 @@ p {
 .navbar__menu__item {
   padding: 8px 12px;
   margin: 0 4px;
+  color: var(--color-white);
   cursor: pointer;
   border-radius: var(--size-border-radius);
-  border: 1px solid transparent;
-  border-radius: var(--size-border-radius);
 }
-
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+}
 .navbar__menu__item:hover {
   border-color: var(--color-white);
   background-color: var(--color-dark-pink);
@@ -130,8 +130,8 @@ p {
 
 .navbar__toggle-btn {
   position: absolute;
-  right: 32px;
-  top: 16px;
+  right: 24px;
+  top: 32px;
   font-size: 24px;
   color: var(--color-white);
   display: none;
@@ -196,7 +196,7 @@ p {
   margin: auto;
   border: 1px solid var(--color-blue);
   border-radius: 50%;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   color: var(--color-blue);
 }
 .major__icon i {
@@ -207,6 +207,7 @@ p {
   color: var(--color-pink);
   transform: rotate(-30deg) scale(1.1);
 }
+
 .major__title,
 .major__description {
   color: var(--color-dark-grey);
@@ -349,6 +350,7 @@ p {
 .project__img {
   max-width: 100%;
   max-height: 100%;
+  align-self: center;
 }
 
 .project__description {
@@ -494,6 +496,7 @@ p {
     width: 100%;
     display: none;
   }
+
   .navbar__menu.open {
     display: block;
   }
@@ -514,6 +517,7 @@ p {
   }
   .category__btn {
     margin: 4px 0;
+    width: 100%;
   }
   .project {
     flex-grow: 1;
